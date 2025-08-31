@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rohan Jana | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-bar {
+      transition: width 1.5s ease-in-out;
+    }
+
+    .colorful-tag-1 {
+      background-color: #fce7f3;
+      color: #9d174d;
+    }
+
+    .colorful-tag-2 {
+      background-color: #e0f2fe;
+      color: #0c4a6e;
+    }
+
+    .colorful-tag-3 {
+      background-color: #dcfce7;
+      color: #166534;
+    }
+
+    .colorful-tag-4 {
+      background-color: #fef3c7;
+      color: #92400e;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <nav class="fixed w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-2xl font-bold text-indigo-600">Rohan Jana</div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="hover:text-indigo-600 transition-colors">Home</a>
+          <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
+          <a href="#projects" class="hover:text-indigo-600 transition-colors">Projects</a>
+          <a href="#myskills" class="hover:text-indigo-600 transition-colors">My Skills</a>
+          <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-600">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden bg-white shadow-lg py-4">
+      <div class="flex flex-col space-y-4 px-6">
+        <a href="#home" class="hover:text-indigo-600">Home</a>
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        <a href="#myskills" class="hover:text-indigo-600">My Skills</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-gradient min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6 py-20">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+            Hi, I'm <span class="text-yellow-300">Rohan Jana</span>
+          </h1>
+          <p class="text-xl text-white opacity-90 mb-8">
+            B.Tech IT student passionate about Full Stack Development, focused on building impactful digital solutions while continuously learning and growing as a developer.
+          </p>
+          <p class="text-lg text-white opacity-80 mb-8">
+            Creating innovative solutions through code and turning ideas into reality.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#projects"
+              class="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+              >View Projects</a
+            >
+            <a
+              href="#contact"
+              class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+              >Get In Touch</a
+            >
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div
+            class="w-80 h-80 bg-white rounded-full shadow-2xl flex items-center justify-center overflow-hidden"
+          >
+            <img
+              src="https://media.licdn.com/dms/image/v2/D5603AQFyGJQ4u0R6Ng/profile-displayphoto-shrink_200_200/B56ZOrEWnFGsAY-/0/1733741866610?e=1759363200&v=beta&t=fH0AEZ68f_yFFRjXlrDkxElnOGW9jy5Ss9ZwCDn4FxM"
+              alt="Portrait of Rohan Jana - a professional young BTech student with glasses, smiling confidently against a neutral background"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #667eea 0%, #764ba2 100%)'"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-gray-200">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">About Me</h2>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-indigo-600">My Journey</h3>
+          <p class="text-lg text-gray-700 mb-6">
+            I'm a passionate BTech student with a deep interest in software development and emerging
+            technologies. My journey in programming began with curiosity and has evolved into a pursuit of
+            creating meaningful applications that solve real-world problems.
+          </p>
+          <p class="text-lg text-gray-700 mb-8">
+            I believe in continuous learning and staying updated with the latest trends in technology. My
+            goal is to leverage my skills to contribute to innovative projects and make a positive impact
+            through technology.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold mb-3 text-gray-800">Education</h4>
+              <p class="text-gray-600">Bachelor of Technology</p>
+              <p class="text-sm text-gray-500">Information Technology</p>
+            </div>
+            <div>
+              <h4 class="font-semibold mb-3 text-gray-800">Focus Areas</h4>
+              <p class="text-gray-600">Web Development</p>
+              <p class="text-sm text-gray-500">Full Stack Applications</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf5xn7wanLDkCqoBxukTW9k232HFSZZB2frA&s" 
+            alt="Man sitting at a table with a laptop, working"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">My Projects</h2>
+      <p class="text-xl text-center text-gray-600 mb-16">
+        Showcasing my passion for creating innovative solutions
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300"
+        >
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a4630667-9613-43cf-af40-4526a9aacb6c.png"
+              alt="Modern e-commerce website interface with product grid, shopping cart icon, and clean minimalist design with blue accents"
+              class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-3 text-gray-800">E-Commerce Platform</h3>
+            <p class="text-gray-600 mb-4">
+              A full-stack e-commerce solution with product catalog, user authentication,
+              shopping cart, and secure payment integration.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="colorful-tag-1 px-3 py-1 rounded-full text-sm"
+                >React</span
+              >
+              <span
+                class="colorful-tag-2 px-3 py-1 rounded-full text-sm"
+                >Node.js</span
+              >
+              <span
+                class="colorful-tag-3 px-3 py-1 rounded-full text-sm"
+                >MongoDB</span
+              >
+              <span
+                class="colorful-tag-4 px-3 py-1 rounded-full text-sm"
+                >Stripe</span
+              >
+            </div>
+            <div class="flex space-x-4">
+              <a href="#" class="text-indigo-600 hover:text-indigo-800">Live Demo</a>
+              <a href="#" class="text-gray-600 hover:text-gray-800">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300"
+        >
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/888f3ee5-7bc8-4ede-b406-2aad85dad635.png"
+              alt="GitHub profile finder application interface showing user statistics, repository grid, and search functionality with dark theme"
+              class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #667eea 0%, #764ba2 100%)'"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-3 text-gray-800">GitHub Profile Finder</h3>
+            <p class="text-gray-600 mb-4">
+              A web application that allows users to search for GitHub profiles, view statistics,
+              and explore repositories with detailed analytics.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="colorful-tag-1 px-3 py-1 rounded-full text-sm"
+                >JavaScript</span
+              >
+              <span
+                class="colorful-tag-2 px-3 py-1 rounded-full text-sm"
+                >GitHub API</span
+              >
+              <span
+                class="colorful-tag-3 px-3 py-1 rounded-full text-sm"
+                >CSS3</span
+              >
+              <span
+                class="colorful-tag-4 px-3 py-1 rounded-full text-sm"
+                >HTML5</span
+              >
+            </div>
+            <div class="flex space-x-4">
+              <a href="#" class="text-indigo-600 hover:text-indigo-800">Live Demo</a>
+              <a href="#" class="text-gray-600 hover:text-gray-800">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project-card bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300"
+        >
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/be3419d5-08c1-4228-8469-184f7fc6c4f0.png"
+              alt="Modern weather application interface showing current conditions, 7-day forecast, and location-based weather data with clean blue theme"
+              class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #fa709a 0%, #fee140 100%)'"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-semibold mb-3 text-gray-800">Weather Application</h3>
+            <p class="text-gray-600 mb-4">
+              A responsive weather app that provides real-time weather data, forecasts,
+              and location-based weather information with an intuitive UI.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="colorful-tag-1 px-3 py-1 rounded-full text-sm"
+                >React</span
+              >
+              <span
+                class="colorful-tag-2 px-3 py-1 rounded-full text-sm"
+                >API Integration</span
+              >
+              <span
+                class="colorful-tag-3 px-3 py-1 rounded-full text-sm"
+                >Geolocation</span
+              >
+              <span
+                class="colorful-tag-4 px-3 py-1 rounded-full text-sm"
+                >Responsive</span
+              >
+            </div>
+            <div class="flex space-x-4">
+              <a href="#" class="text-indigo-600 hover:text-indigo-800">Live Demo</a>
+              <a href="#" class="text-gray-600 hover:text-gray-800">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="myskills" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">My Skills</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-indigo-600">Frontend Development</h3>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <i class="fab fa-html5 text-3xl text-orange-500 mr-4"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">HTML5</h4>
+                <p class="text-gray-600">Structuring web content and creating semantic markup.</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fab fa-css3-alt text-3xl text-blue-500 mr-4"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">CSS3</h4>
+                <p class="text-gray-600">Styling, responsive design, and modern layouts (Flexbox, Grid).</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fab fa-js-square text-3xl text-yellow-500 mr-4"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">JavaScript (ES6+)</h4>
+                <p class="text-gray-600">Building interactive web applications and dynamic user interfaces.</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fab fa-react text-3xl text-cyan-500 mr-4"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">React.js</h4>
+                <p class="text-gray-600">Developing component-based, single-page applications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-indigo-600">Backend & Database</h3>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <i class="fab fa-node-js text-3xl text-green-600 mr-4"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">Node.js</h4>
+                <p class="text-gray-600">Building fast and scalable server-side applications and APIs.</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-database text-3xl text-gray-600 mr-4"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">Databases</h4>
+                <p class="text-gray-600">Experienced with <em>MongoDB</em> (NoSQL) and basic SQL knowledge.</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-cogs text-3xl text-gray-700 mr-4"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">API Development</h4>
+                <p class="text-gray-600">Designing and integrating RESTful APIs for web services.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">Get in Touch</h2>
+      <p class="text-xl text-center text-gray-600 mb-12">
+        I'm always open to new opportunities and collaborations.
+      </p>
+
+      <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+        <div class="w-full md:w-1/3">
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-envelope text-indigo-600 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">Email</h4>
+                <a href="mailto:rohanjana967@gmail.com" class="text-gray-600 hover:text-indigo-600 transition-colors">rohanjana967@gmail.com</a>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-phone-alt text-indigo-600 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">Phone</h4>
+                <a href="tel:91......56" class="text-gray-600 hover:text-indigo-600 transition-colors">+91-91......56</a>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fas fa-map-marker-alt text-indigo-600 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">Location</h4>
+                <p class="text-gray-600">Kolkata West bengal, India</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fab fa-linkedin text-indigo-600 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">LinkedIn</h4>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">https://www</a>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <i class="fab fa-github text-indigo-600 text-2xl"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">GitHub</h4>
+                <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">github.com/rohanjana</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full md:w-2/3 bg-white p-8 rounded-lg shadow-lg">
+          <form action="#" method="POST" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
+            </div>
+            <div>
+              <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-indigo-700 transition-colors">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p class="mb-4">&copy; 2024 Rohan Jana. All Rights Reserved.</p>
+      <div class="flex justify-center space-x-6">
+        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+          <i class="fab fa-github text-2xl"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/rohan-jana-95222927a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-white transition-colors duration-300">
+          <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+          <i class="fab fa-twitter text-2xl"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(item => {
+      item.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('nav a').forEach(link => {
+            link.classList.remove('text-indigo-600', 'font-bold');
+            if (link.href.includes(entry.target.id)) {
+              link.classList.add('text-indigo-600', 'font-bold');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Animate skill bars (if you add them later)
+    window.addEventListener('scroll', () => {
+      const skillsSection = document.getElementById('myskills');
+      if (skillsSection.getBoundingClientRect().top < window.innerHeight / 2) {
+        document.querySelectorAll('.skill-bar-inner').forEach(bar => {
+          const percent = bar.getAttribute('data-percent');
+          bar.style.width = percent;
+        });
+      }
+    });
+  </script>
+</body>
+</html>
